@@ -1,0 +1,14 @@
+{
+  "name": "otc-echo",
+  "version": "1.0.0",
+  "description": "Express route that echoes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Paul_Webster@ca.ibm.com",
+  "license": "SEE LICENSE IN LICENSE",
+  "dependencies": {
+    "express": "^4.14.1"
+  }
+}
