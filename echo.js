@@ -17,7 +17,6 @@ module.exports = router;
 
 /*
  * A debugging controller that echoes all the body that it received. 
- * Only register a route for this controller temporarily.
  */
 router.all('*', function(req, res) {
     res.status(200)
