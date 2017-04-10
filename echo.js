@@ -19,7 +19,9 @@ module.exports = router;
  * A debugging controller that echoes all the body that it received. 
  */
 router.all('*', function(req, res) {
+	var resp = JSON.stringify(req.body, null, 4);
     res.status(200)
         .set('Content-Type', 'text/plain')
-        .send(JSON.stringify(req.body, null, 4));
+        .send(resp);
+    console.log('echo: ' + req.url + '\n' + resp);
 });

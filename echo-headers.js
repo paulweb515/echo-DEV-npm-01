@@ -20,7 +20,9 @@ module.exports = router;
  * what headers the proxies are adding to a request. Only register a route for this controller temporarily.
  */
 router.all('*', function(req, res) {
+	var resp = JSON.stringify(req.headers, null, 4);
     res.status(200)
         .set('Content-Type', 'text/plain')
-        .send(JSON.stringify(req.headers, null, 4));
+        .send(resp);
+    console.log('echo-headers: ' + req.url + '\n' + resp);
 });
